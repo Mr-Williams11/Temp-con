@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var toFahrenheitBtn = document.getElementById('toFahrenheitBtn');
-    var toCelsiusBtn = document.getElementById('toCelsiusBtn');
+    let toFahrenheitBtn = document.getElementById('toFahrenheitBtn');
+    let toCelsiusBtn = document.getElementById('toCelsiusBtn');
 
     toFahrenheitBtn.addEventListener('click', function () {
         convert('celsius');
@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function convert(unit) {
     if (unit === 'celsius') {
-        var celsius = parseFloat(document.getElementById('celsius').value);
-        var fahrenheit = (celsius * 9/5) + 32;
+        let celsius = parseFloat(document.getElementById('celsius').value);
+        let fahrenheit = (celsius * 9/5) + 32;
         document.getElementById('fahrenheit').value = fahrenheit.toFixed(2);
     } else if (unit === 'fahrenheit') {
-        var fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
-        var celsius = (fahrenheit - 32) * 5/9;
+        let fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+        let celsius = (fahrenheit - 32) * 5/9;
         document.getElementById('celsius').value = celsius.toFixed(2);
     }
 }
